@@ -11,7 +11,6 @@ const openSans = Open_Sans({
 export const metadata: Metadata = {
   title: 'Engineer Robera',
   description: 'Network Engineer Portfolio - Showcasing expertise in network infrastructure, security, and innovative solutions',
-  generator: 'v0.dev',
 }
 
 export default function RootLayout({
