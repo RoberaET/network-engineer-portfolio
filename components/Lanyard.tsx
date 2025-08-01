@@ -179,7 +179,7 @@ function Band({ maxSpeed = 50, minSpeed = 0 }) {
           lineWidth={0.82}
           transparent
           opacity={1}
-        />
+        />u
       </mesh>
     </>
   );
