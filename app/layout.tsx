@@ -41,20 +41,20 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://roberaportfolio-ft9uhpqqz-roberas-projects-b94cfe4c.vercel.app'),
+  metadataBase: new URL('https://robera.vercel.app'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://roberaportfolio-ft9uhpqqz-roberas-projects-b94cfe4c.vercel.app',
+    url: 'https://robera.vercel.app',
     title: 'Robera Mekonnen - Network Engineer & Security Specialist',
     description: 'Expert Network Engineer specializing in network security, firewall configuration, penetration testing, and Cisco technologies. View portfolio, skills, and contact information.',
     siteName: 'Robera Mekonnen Portfolio',
     images: [
       {
-        url: '/og-image.png',
+        url: 'https://robera.vercel.app/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Robera Mekonnen - Network Engineer Portfolio',
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Robera Mekonnen - Network Engineer & Security Specialist',
     description: 'Expert Network Engineer specializing in network security, firewall configuration, penetration testing, and Cisco technologies.',
-    images: ['/og-image.png'],
+    images: ['https://robera.vercel.app/og-image.png'],
     creator: '@robera_mekonnen',
   },
   robots: {
@@ -101,6 +101,10 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#2563eb" />
+        <meta name="application-name" content="Robera Mekonnen Portfolio" />
+        <meta name="apple-mobile-web-app-title" content="Robera Portfolio" />
+        <meta name="msapplication-TileColor" content="#2563eb" />
+        <meta name="msapplication-config" content="/browserconfig.xml" />
         <StructuredData />
       </head>
       <body className="font-sans">

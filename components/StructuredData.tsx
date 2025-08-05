@@ -5,8 +5,8 @@ export default function StructuredData() {
     "name": "Robera Mekonnen",
     "jobTitle": "Network Engineer",
     "description": "Expert Network Engineer specializing in network security, firewall configuration, and penetration testing",
-    "url": "https://roberaportfolio-ft9uhpqqz-roberas-projects-b94cfe4c.vercel.app",
-    "image": "https://roberaportfolio-ft9uhpqqz-roberas-projects-b94cfe4c.vercel.app/profile-image.jpg",
+    "url": "https://robera.vercel.app",
+    "image": "https://robera.vercel.app/profile-image.jpg",
     "email": "robera4553@gmail.com",
     "telephone": "+251941552458",
     "address": {
