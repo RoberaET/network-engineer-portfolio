@@ -46,15 +46,18 @@ export default function Portfolio() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
+      <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50">
+        Skip to main content
+      </a>
       {/* Header */}
-      <header className="bg-white shadow-sm border-b">
+      <header className="bg-white shadow-sm border-b" role="banner">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4 md:py-6">
             <div className="flex items-center space-x-2">
-              <Shield className="h-8 w-8 text-blue-600" />
-              <span className="text-lg md:text-2xl font-bold text-gray-900">ROBERA MEKONNEN</span>
+              <Shield className="h-8 w-8 text-blue-600" aria-hidden="true" />
+              <h1 className="text-lg md:text-2xl font-bold text-gray-900">ROBERA MEKONNEN</h1>
             </div>
-            <nav className="flex space-x-4 md:space-x-8">
+            <nav className="flex space-x-4 md:space-x-8" role="navigation" aria-label="Main navigation">
               <a 
                 href="#home" 
                 className="text-sm md:text-base text-gray-700 hover:text-blue-600 transition-colors duration-300 hover:scale-105"
@@ -116,15 +119,17 @@ export default function Portfolio() {
       <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
 
       {/* Hero Section */}
-      <section className="py-0 px-4 sm:px-6 lg:px-8" id="home">
+      <section className="py-0 px-4 sm:px-6 lg:px-8" id="main-content" role="main">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <div className="mb-6">
+              <h2 className="sr-only">Network Engineer & Cybersecurity Professional</h2>
               <GradientText
                 colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
                 animationSpeed={3}
                 showBorder={false}
                 className="text-4xl md:text-6xl font-bold"
+                aria-label="Network Engineer & Cybersecurity Professional"
               >
                 Network Engineer & Cybersecurity Professional
               </GradientText>
@@ -149,10 +154,10 @@ export default function Portfolio() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 bg-white">
+      <section id="about" className="py-20 bg-white" aria-labelledby="about-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 id="about-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               About Me
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -234,10 +239,10 @@ export default function Portfolio() {
       </section>
 
       {/* Certifications Section */}
-      <section id="certifications" className="py-20 bg-slate-50">
+      <section id="certifications" className="py-20 bg-slate-50" aria-labelledby="certifications-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 id="certifications-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Professional Certifications
             </h2>
             <p className="text-lg text-gray-600">
@@ -311,21 +316,22 @@ export default function Portfolio() {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-20 bg-white">
+      <section id="skills" className="py-20 bg-white" aria-labelledby="skills-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 id="skills-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Technical Skills
             </h2>
             <p className="text-lg text-gray-600">Core competencies in network engineering and cybersecurity</p>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="flex flex-wrap justify-center gap-3" role="list" aria-label="Technical skills">
             {skills.map((skill, index) => (
               <Badge
                 key={index}
                 variant="outline"
                 className="px-4 py-2 text-sm font-medium hover:bg-blue-50 hover:border-blue-300 transition-colors"
+                role="listitem"
               >
                 {skill}
               </Badge>
@@ -335,7 +341,7 @@ export default function Portfolio() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-gray-900 text-white relative overflow-hidden">
+      <section id="contact" className="py-20 bg-gray-900 text-white relative overflow-hidden" aria-labelledby="contact-heading">
         <div style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0 }}>
           <LightRays
             raysOrigin="top-center"
@@ -354,27 +360,31 @@ export default function Portfolio() {
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 id="contact-heading" className="text-3xl md:text-4xl font-bold text-white mb-4">
               Let's Connect
             </h2>
             <p className="text-lg text-gray-300">Ready to discuss network security solutions and opportunities</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 text-center">
-            <div className="flex flex-col items-center">
-              <Mail className="h-8 w-8 text-blue-400 mb-4" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 text-center" role="list" aria-label="Contact information">
+            <div className="flex flex-col items-center" role="listitem">
+              <Mail className="h-8 w-8 text-blue-400 mb-4" aria-hidden="true" />
               <h3 className="text-xl font-semibold mb-2">Email</h3>
-              <p className="text-gray-300">robera4553@gmail.com</p>
+              <a href="mailto:robera4553@gmail.com" className="text-gray-300 hover:text-blue-400 transition-colors">
+                robera4553@gmail.com
+              </a>
             </div>
 
-            <div className="flex flex-col items-center">
-              <Phone className="h-8 w-8 text-blue-400 mb-4" />
+            <div className="flex flex-col items-center" role="listitem">
+              <Phone className="h-8 w-8 text-blue-400 mb-4" aria-hidden="true" />
               <h3 className="text-xl font-semibold mb-2">Phone</h3>
-              <p className="text-gray-300">+251 94155 2458</p>
+              <a href="tel:+251941552458" className="text-gray-300 hover:text-blue-400 transition-colors">
+                +251 94155 2458
+              </a>
             </div>
 
-            <div className="flex flex-col items-center">
-              <MapPin className="h-8 w-8 text-blue-400 mb-4" />
+            <div className="flex flex-col items-center" role="listitem">
+              <MapPin className="h-8 w-8 text-blue-400 mb-4" aria-hidden="true" />
               <h3 className="text-xl font-semibold mb-2">Location</h3>
               <p className="text-gray-300">Addis Ababa, Ethiopia</p>
             </div>
@@ -404,7 +414,7 @@ export default function Portfolio() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-800 text-white py-8">
+      <footer className="bg-gray-800 text-white py-8" role="contentinfo">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-gray-400">© 2024 Network Engineer Portfolio. Built with Next.js and Tailwind CSS.</p>
         </div>

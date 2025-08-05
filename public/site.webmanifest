@@ -1,0 +1,25 @@
+{
+  "name": "Robera Mekonnen - Network Engineer Portfolio",
+  "short_name": "Robera Portfolio",
+  "description": "Expert Network Engineer specializing in network security, firewall configuration, and penetration testing",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["business", "productivity", "technology"],
+  "lang": "en-US",
+  "dir": "ltr"
+} 
